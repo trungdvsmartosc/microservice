@@ -1,0 +1,27 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: USER-SERVICE
+  profiles:
+    active: user-service
+  config:
+    import: optional:configserver:http://localhost:8888
+  zipkin:
+    base-url: http://127.0.0.1:9411/
+  datasource:
+    url: jdbc:mysql://${HOST_NAME:localhost}:${HOST_PORT:3306}/${MYSQL_DATABASE:smartosc?createDatabaseIfNotExist=true}
+    username: root
+    password: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
