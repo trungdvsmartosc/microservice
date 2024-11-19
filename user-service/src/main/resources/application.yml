@@ -19,6 +19,15 @@ spring:
     hibernate:
       ddl-auto: update
       show-sql: true
+  cloud:
+    stream:
+      bindings:
+        sendMessage-out-0:
+          destination: user-service-topic
+      kafka:
+        binder:
+          brokers: localhost:9092
+          auto-create-topics: true
 
 management:
   tracing:

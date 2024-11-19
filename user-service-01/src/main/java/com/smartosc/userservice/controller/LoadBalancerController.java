@@ -11,10 +11,10 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/users")
-public class DemoController {
+public class LoadBalancerController {
 
     private static final Map<String, String> users = Map.of(
-            "1", "User One 9000"
+            "1", "User One 9001"
     );
 
     @GetMapping("/{id}")

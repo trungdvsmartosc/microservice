@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/users")
-public class DemoController {
+    @RequestMapping("/users")
+public class LoadBalancerController {
 
     private static final Map<String, String> users = Map.of(
-            "1", "User One 9001"
+            "1", "User One 9000"
     );
 
     @GetMapping("/{id}")
