@@ -10,6 +10,6 @@ spring:
       kv:
         enabled: true
         backend: secret
-        application-name: demo
+        application-name: your-app-name
 
   config.import: vault://
