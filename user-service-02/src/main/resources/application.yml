@@ -1,0 +1,15 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: USER-SERVICE
+  cloud:
+    vault:
+      uri: http://localhost:8200
+      kv:
+        enabled: true
+        backend: secret
+        application-name: demo
+
+  config.import: vault://
