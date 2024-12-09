@@ -1,15 +1,9 @@
 server:
-  port: 9000
+  port: 9002
 
 spring:
   application:
-    name: USER-SERVICE
-  profiles:
-    active: user-service
-  config:
-    import: optional:configserver:http://localhost:8888
-  zipkin:
-    base-url: http://127.0.0.1:9411/
+    name: ACCOUNT-MANAGEMENT
   datasource:
     url: jdbc:mysql://${HOST_NAME:localhost}:${HOST_PORT:3306}/${MYSQL_DATABASE:smartosc?createDatabaseIfNotExist=true}
     username: root
@@ -19,9 +13,3 @@ spring:
     hibernate:
       ddl-auto: update
       show-sql: true
-
-management:
-  tracing:
-    enabled: true
-    sampling:
-      probability: 1.0

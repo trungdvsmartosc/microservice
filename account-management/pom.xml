@@ -8,11 +8,11 @@
 		<version>3.3.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.smartosc.userservice</groupId>
-	<artifactId>user-service</artifactId>
+	<groupId>com.smartosc.accountmanagement</groupId>
+	<artifactId>account-management</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>user-service</name>
-	<description>User Service</description>
+	<name>account-management</name>
+	<description>Account management</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -75,10 +75,6 @@
 		<dependency>
 			<groupId>io.zipkin.reporter2</groupId>
 			<artifactId>zipkin-reporter-brave</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

@@ -12,8 +12,8 @@ public class FallBackController {
     @Value("${fall-back-message}")
     private String fallBackMessage;
 
-    @GetMapping("/user-service")
-    public String userServiceFallBack() {
+    @GetMapping("/transaction-processor")
+    public String transactionProcessorFallBack() {
         return fallBackMessage;
     }
 }

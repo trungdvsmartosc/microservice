@@ -8,15 +8,15 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: USER-SERVICE
-          uri: lb://USER-SERVICE
+        - id: TRANSACTION-PROCESSOR
+          uri: lb://TRANSACTION-PROCESSOR
           predicates:
-            - Path=/users/**
+            - Path=/transactions/**
           filters:
             - name: CircuitBreaker
               args:
-                name: userServiceCB
-                fallbackUri: forward:/fallback/user-service
+                name: transactionProcessorCB
+                fallbackUri: forward:/fallback/transaction-processor
 
 management:
   endpoint:
