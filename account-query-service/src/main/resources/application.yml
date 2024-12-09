@@ -1,0 +1,17 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: ACCOUNT-QUERY-SERVICE
+  datasource:
+    url: jdbc:mysql://${HOST_NAME:localhost}:${HOST_PORT:3306}/${MYSQL_DATABASE:smartosc?createDatabaseIfNotExist=true}
+    username: root
+    password: root
+    hikari:
+      read-only: true
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+      show-sql: true
