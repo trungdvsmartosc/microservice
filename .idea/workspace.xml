@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c51040e0-336f-4b3d-91dd-589b4455f011" name="Changes" comment="[skip ci]">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account-management/src/main/java/com/smartosc/accountmanagement/service/impl/AccountQueryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-management/src/main/java/com/smartosc/accountmanagement/service/impl/AccountQueryServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="c51040e0-336f-4b3d-91dd-589b4455f011" name="Changes" comment="feat: use CQRS pattern for AccountService" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +23,16 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {}
 }</component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="[skip ci]" />
+        <option name="rewordedMessage" value="feat: use CQRS pattern" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="72ebc7e5f3484f0425842dbe7a8e407db5c83dc3" />
+  </component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -59,11 +65,11 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1733742264" />
+                    <option name="lastUsedInstant" value="1733825205" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1732177510" />
+                    <option name="lastUsedInstant" value="1733825155" />
                   </RecentBranch>
                 </list>
               </option>
@@ -126,7 +132,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733742194632</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[skip ci]">
+      <option name="closed" value="true" />
+      <created>1733825096709</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733825096709</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: use CQRS pattern for AccountService">
+      <option name="closed" value="true" />
+      <created>1733915709325</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733915709325</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,6 +180,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: spring cloud vault" />
     <MESSAGE value="[skip ci]" />
-    <option name="LAST_COMMIT_MESSAGE" value="[skip ci]" />
+    <MESSAGE value="feat: use CQRS pattern" />
+    <MESSAGE value="feat: use CQRS pattern for AccountService" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: use CQRS pattern for AccountService" />
   </component>
 </project>

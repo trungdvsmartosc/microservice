@@ -12,35 +12,17 @@ import java.time.Instant;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(SQLException.class)
-    public ResponseEntity<ApiExceptionResponse> handleSQLException(SQLException ex) {
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(
-                new ApiExceptionResponse(
-                        HttpStatus.INTERNAL_SERVER_ERROR.value(),
-                        "Database error: " + ex.getMessage(),
-                        Instant.now()
-                )
-        );
+    public <T> ResponseEntity<ApiExceptionResponse<T>> handleSQLException(SQLException ex) {
+        return ApiExceptionResponse.internalServerError(ex.getMessage());
     }
 
     @ExceptionHandler(IllegalArgumentException.class)
-    public ResponseEntity<ApiExceptionResponse> handleIllegalArgumentException(IllegalArgumentException ex) {
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(
-                new ApiExceptionResponse(
-                        HttpStatus.BAD_REQUEST.value(),
-                        ex.getMessage(),
-                        Instant.now()
-                )
-        );
+    public ResponseEntity<ApiExceptionResponse<Object>> handleIllegalArgumentException(IllegalArgumentException ex) {
+        return ApiExceptionResponse.badRequest(ex.getMessage());
     }
 
     @ExceptionHandler(ApiException.class)
-    public ResponseEntity<ApiExceptionResponse> handleEntityNotFoundException(ApiException ex) {
-        return ResponseEntity.status(ex.getStatusCode()).body(
-                new ApiExceptionResponse(
-                        ex.getStatusCode().value(),
-                        ex.getMessage(),
-                        Instant.now()
-                )
-        );
+    public ResponseEntity<ApiExceptionResponse<Object>> handleEntityException(ApiException ex) {
+        return ApiExceptionResponse.ofNullData(ex.getStatusCode(), ex.getMessage());
     }
 }

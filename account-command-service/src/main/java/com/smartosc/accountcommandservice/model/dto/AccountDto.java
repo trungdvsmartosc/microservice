@@ -8,12 +8,10 @@ import lombok.Setter;
 @Setter
 public class AccountDto {
 
-    @Column(nullable = false, length = 50)
-    private String holder;
-
     @Column(nullable = false, length = 15)
     private String number;
 
+    private String holder;
     private double balance;
     private boolean status;
 }

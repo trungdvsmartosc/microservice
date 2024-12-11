@@ -1,7 +1,7 @@
 package com.smartosc.accountcommandservice.controller;
 
+import com.smartosc.accountcommandservice.exception.ApiExceptionResponse;
 import com.smartosc.accountcommandservice.model.dto.AccountDto;
-import com.smartosc.accountcommandservice.model.entity.Account;
 import com.smartosc.accountcommandservice.service.AccountService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -17,12 +17,12 @@ public class AccountController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Account> createAccount(@RequestBody AccountDto accountDto) {
-        return ResponseEntity.ok(accountService.create(accountDto));
+    public ResponseEntity<ApiExceptionResponse<AccountDto>> createAccount(@RequestBody AccountDto accountDto) {
+        return accountService.create(accountDto);
     }
 
     @PutMapping
-    public ResponseEntity<Account> updateAccount(@RequestParam("account_number") String accountNumber, @RequestBody AccountDto account) {
-        return ResponseEntity.ok(accountService.update(accountNumber, account));
+    public ResponseEntity<ApiExceptionResponse<AccountDto>> updateBalance(@RequestParam("account_number") String accountNumber, @RequestBody AccountDto account) {
+        return accountService.updateBalance(accountNumber, account);
     }
 }

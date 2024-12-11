@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.smartosc</groupId>
-    <artifactId>transaction</artifactId>
+    <artifactId>transaction-query-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>transaction</name>
+    <name>transaction-query-service</name>
     <description>Demo project for Spring Boot</description>
     <url/>
     <licenses>

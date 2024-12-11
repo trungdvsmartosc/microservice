@@ -1,11 +1,12 @@
 package com.smartosc.accountcommandservice.service;
 
+import com.smartosc.accountcommandservice.exception.ApiExceptionResponse;
 import com.smartosc.accountcommandservice.model.dto.AccountDto;
-import com.smartosc.accountcommandservice.model.entity.Account;
+import org.springframework.http.ResponseEntity;
 
 public interface AccountService {
 
-    Account create(AccountDto account);
+    ResponseEntity<ApiExceptionResponse<AccountDto>> create(AccountDto account);
 
-    Account update(String accountNumber, AccountDto account);
+    ResponseEntity<ApiExceptionResponse<AccountDto>> updateBalance(String accountNumber, AccountDto account);
 }
