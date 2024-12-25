@@ -10,5 +10,7 @@ import org.mapstruct.Mapper;
         injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface AccountMapper {
 
+    Account convertToAccount(AccountDto accountDto);
+
     AccountDto convertToAccountDto(Account account);
 }

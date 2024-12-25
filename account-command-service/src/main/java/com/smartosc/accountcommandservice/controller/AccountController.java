@@ -17,8 +17,8 @@ public class AccountController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<ApiExceptionResponse<AccountDto>> createAccount(@RequestBody AccountDto accountDto) {
-        return accountService.create(accountDto);
+    public void createAccount(@RequestBody AccountDto accountDto) {
+        accountService.create(accountDto);
     }
 
     @PutMapping
